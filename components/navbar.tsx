@@ -1,7 +1,7 @@
 // Navbar
 import Logo from "@/public/logo.png";
 import Image from "next/image";
-import Link from "./sys-app-webkit/next/components/link";
+import Link from "@/sys-app-webkit/next/components/link";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { Button, buttonVariants } from "./ui/button";
