@@ -1,8 +1,7 @@
 // Footer lib
 import FooterData from "@/data/footer.json";
-import { LinkProps } from "@/sys-app-webkit/next/types/link";
 
-interface FooterLink extends LinkProps {
+interface FooterLink {
     target: string | FooterClass
 }
 
