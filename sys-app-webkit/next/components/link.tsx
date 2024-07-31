@@ -10,13 +10,15 @@ interface LinkProps extends NextLinkProps {
     isExternal?: boolean
 }
 
-const Link: React.FC<LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>> = ({ href, className, iconSize="4", hideIcon, isExternal, ...props }) => {
+const Link: React.FC<LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>> = ({ href, className, iconSize = "4", hideIcon, isExternal, ...props }) => {
     const LinkStyle = "flex flex-row items-center gap-1";
 
     return (
         <NextLink href={href} className={cn(LinkStyle, className)} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} {...props}>
             {props.children}
-            {isExternal && !hideIcon && <ExternalLink className={cn(`w-${iconSize}`)}/>}
+            {isExternal && !hideIcon && (
+                <ExternalLink className={cn(`w-${iconSize}`)} />
+            )}
         </NextLink>
     )
 }
