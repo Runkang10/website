@@ -1,4 +1,4 @@
-import Link from "@/components/sys-app-webkit/next/components/link";
+import Link from "@/sys-app-webkit/next/components/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn, getDateYear } from "@/lib/utils";
 import HeroBanner from "@/public/herobanner.svg";

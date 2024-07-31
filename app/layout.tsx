@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn, getDateYear } from "@/lib/utils";
+// import { Analytics } from "@vercel/analytics/next";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // CSS
 import "@/css/loading.css";
@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Runkang10",
-    template: "%s | Runkang10"
+    template: "%s - Runkang10"
   },
   description: "Hi, I'm Runkang10, founder of SyS App.",
   icons: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   category: "portfolio",
   openGraph: {
     title: "Runkang10",
-    description: "Hi, I'm Runkang10, founder of SyS App.",
+    description: `Hi, I'm Runkang10, a ${getDateYear() - 2010} years old developer and founder of SyS App.`,
     images: [
       {
         url: "https://runkang10.sysapp.org/og.png",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Runkang10",
-    description: "Hi, I'm Runkang10, founder of SyS App.",
+    description: `Hi, I'm Runkang10, a ${getDateYear() - 2010} years old developer and founder of SyS App.`,
     images: [
       {
         url: "https://runkang10.sysapp.org/og.png",
@@ -75,9 +75,9 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        {/* Vercel */}
-        <Analytics />
-        <SpeedInsights />
+        {/* Vercel (Disabled for now) */}
+        {/* <Analytics />
+        <SpeedInsights /> */}
       </body>
     </html>
   );

@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+    title: "About",
+    description: "About me."
+}
 
 const About = () => {
     return (
@@ -6,5 +12,5 @@ const About = () => {
     )
 }
 
-
+export { metadata };
 export default About;
