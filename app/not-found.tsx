@@ -1,3 +1,18 @@
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+    title: "404",
+    description: "This page could not be found.",
+    openGraph: {
+        title: "404",
+        description: "This page could not be found."
+    },
+    twitter: {
+        title: "404",
+        description: "This page could not be found."
+    }
+}
+
 const E404 = () => {
     return (
         <div className="flex items-center justify-center flex-1">
@@ -13,4 +28,6 @@ const E404 = () => {
     )
 }
 
+
+export { metadata };
 export default E404;
