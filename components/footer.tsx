@@ -66,7 +66,7 @@ const Footer = () => {
                                             href={item.href.href}
                                             isExternal={item.href.external}
                                             hideIcon={item.href.external && item.href.hideicon}
-                                            className="w-full text-muted-foreground transition-colors hover:text-primary"
+                                            className="w-max text-muted-foreground transition-colors hover:text-primary"
                                             key={idx}
                                         >
                                             {item.name}
