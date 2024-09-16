@@ -16,21 +16,20 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Runkang10",
-    template: "%s - Runkang10"
+    template: "%s - Runkang10",
   },
   description: "Hi, I'm Runkang10, founder of SyS App.",
-  icons: [
-    "favicon.ico",
-    "logo.png"
-  ],
+  icons: ["favicon.ico", "logo.png"],
   category: "portfolio",
   openGraph: {
     title: "Runkang10",
-    description: `Hi, I'm Runkang10, a ${getDateYear() - 2010} years old developer and founder of SyS App.`,
+    description: `Hi, I'm Runkang10, a ${
+      getDateYear() - 2010
+    } years old developer and founder of SyS App.`,
     images: [
       {
         url: "https://runkang10.sysapp.org/og.png",
-        alt: "Runkng10",
+        alt: "Runkang10",
         width: 1200,
         height: 630,
       },
@@ -38,13 +37,15 @@ export const metadata: Metadata = {
         url: "https://runkang10.sysapp.org/og.svg",
         alt: "Runkang10",
         width: 1200,
-        height: 630
-      }
-    ]
+        height: 630,
+      },
+    ],
   },
   twitter: {
     title: "Runkang10",
-    description: `Hi, I'm Runkang10, a ${getDateYear() - 2010} years old developer and founder of SyS App.`,
+    description: `Hi, I'm Runkang10, a ${
+      getDateYear() - 2010
+    } years old developer and founder of SyS App.`,
     images: [
       {
         url: "https://runkang10.sysapp.org/og.png",
@@ -56,10 +57,10 @@ export const metadata: Metadata = {
         url: "https://runkang10.sysapp.org/og.svg",
         alt: "Runkang10",
         width: 1200,
-        height: 630
-      }
-    ]
-  }
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -69,9 +70,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "antialiased w-screen min-h-screen flex flex-col")} suppressHydrationWarning>
+      <body
+        className={cn(
+          inter.className,
+          "antialiased w-screen min-h-screen flex flex-col"
+        )}
+        suppressHydrationWarning
+      >
         <NavBar />
-        <main className="min-w-full min-h-[500px] mx-auto flex-1 flex flex-col">
+        <main className="min-w-full min-h-[550px] mx-auto flex-1 flex flex-col">
           {children}
         </main>
         <Footer />

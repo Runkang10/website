@@ -49,10 +49,12 @@ const SocialLinks: React.FC<HTMLAttributes<HTMLUListElement>> = async ({ ...prop
 }
 
 const NavBar = async () => {
-    const getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
+    let getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
+    getProjects = getProjects.slice(0, 5);
+
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-background transition-shadow">
+        <header className="sticky top-0 z-50 w-full backdrop-blur-md transition-shadow">
             <nav className="max-w-7xl flex flex-row items-center mx-auto px-4 py-3 gap-8">
                 <PageBrandTemplate />
                 <NavigationMenu>

@@ -12,7 +12,7 @@ export default function Home() {
           <div className="relative flex flex-row items-center w-full h-full">
             <Image
               src={HeroBanner}
-              alt="Hero"
+              alt=""
               style={{ objectFit: "cover" }}
               fill
               className="w-full h-full"
@@ -30,10 +30,22 @@ export default function Home() {
               </p>
               <br />
               <div className="flex flex-row gap-4 mt-8 justify-center lg:justify-start">
-                <Link href="/projects" className={cn(buttonVariants({ variant: "default", className: "px-8" }))}>
-                  Explore
+                <Link
+                  href="/projects"
+                  className={cn(
+                    buttonVariants({ variant: "default", className: "px-8" })
+                  )}
+                >
+                  Projects
                 </Link>
-                <Link href="https://github.com/Runkang10" className={cn(buttonVariants({ variant: "outline", className: "px-8" }))} isExternal hideIcon>
+                <Link
+                  href="https://github.com/Runkang10"
+                  className={cn(
+                    buttonVariants({ variant: "outline", className: "px-8" })
+                  )}
+                  isExternal
+                  hideIcon
+                >
                   Github
                 </Link>
               </div>
@@ -41,8 +53,14 @@ export default function Home() {
           </div>
         </header>
       </div>
-      <div className="max-w-7xl mx-auto flex flex-col">
-
+      <div className="max-w-7xl w-full mx-auto flex flex-col">
+        <div className="flex-1 p-8">
+          <p className="md:text-center text-left italic">
+            Currently I&apos;m learning Java for Minecraft development so i have
+            less time in web development. I will come back to continue other
+            projects.
+          </p>
+        </div>
       </div>
     </>
   );
