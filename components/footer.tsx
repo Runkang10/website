@@ -24,8 +24,8 @@ interface SocialProps {
 // All social links (External)
 const SocialList: SocialProps[] = [
   {
-    image: <Image src={GithubLogo} alt="Github" width={17.5} height={17.5} />,
-    url: "https://github.com/SyS-App/",
+    image: <Image src={GithubLogo} alt="Source code" width={17.5} height={17.5} />,
+    url: "https://github.com/Runkang10/website/",
   },
 ];
 
@@ -78,7 +78,6 @@ const Footer = () => {
                     </Link>
                   );
                 }
-                return;
               })}
             </div>
           </section>
