@@ -82,9 +82,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        {/* Vercel (Disabled for now) */}
-        {/* <Analytics />
-        <SpeedInsights /> */}
       </body>
     </html>
   );
