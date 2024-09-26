@@ -51,6 +51,7 @@ const SocialLinks = ({ reverse }: ReverseProps) => {
 
 const Footer = async () => {
   let getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
+  getProjects = getProjects.slice(0, 8);
 
   return (
     // Footer
