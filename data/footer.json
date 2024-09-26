@@ -1,33 +1,6 @@
 {
     "links": [
         {
-            "name": "SyS App",
-            "href": {
-                "href": "https://sysapp.org",
-                "hideicon": false,
-                "external": true
-            },
-            "target": "projects"
-        },
-        {
-            "name": "SyS App Webkit",
-            "href": {
-                "href": "/project/sys-app-webkit",
-                "hideicon": false,
-                "external": false
-            },
-            "target": "projects"
-        },
-        {
-            "name": "OptionalsX",
-            "href": {
-                "href": "/project/optionalsx",
-                "hideicon": false,
-                "external": false
-            },
-            "target": "projects"
-        },
-        {
             "name": "Github",
             "href": {
                 "href": "https://github.com/Runkang10/",
@@ -65,10 +38,6 @@
         }
     ],
     "classes": [
-        {
-            "name": "Projects",
-            "target": "projects"
-        },
         {
             "name": "Community",
             "target": "community"

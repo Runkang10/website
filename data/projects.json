@@ -14,9 +14,9 @@
         }
     },
     {
-        "name": "OptionalsX",
+        "name": "SimplePlugin",
         "href": {
-            "href": "/project/optionalsx",
+            "href": "/project/simpleplugin",
             "external": false
         }
     }
