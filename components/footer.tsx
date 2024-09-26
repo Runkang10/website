@@ -5,6 +5,9 @@ import Logo from "@/public/logo.png";
 import GithubLogo from "@/public/github/github-mark-white.svg";
 import { getDateYear } from "@/lib/utils";
 import { FooterData } from "@/lib/footer";
+import { projectProps } from "./navbar";
+import { ReadAndGetAsList } from "@/lib/data";
+import { Separator } from "./ui/separator";
 // import { FooterConfig, FooterConfigItems } from "@/config/footer";
 // import { CLink } from "@/components/ui/CLink";
 // import { LogoWithText } from "@/components/logo/default";
@@ -24,7 +27,9 @@ interface SocialProps {
 // All social links (External)
 const SocialList: SocialProps[] = [
   {
-    image: <Image src={GithubLogo} alt="Source code" width={17.5} height={17.5} />,
+    image: (
+      <Image src={GithubLogo} alt="Source code" width={17.5} height={17.5} />
+    ),
     url: "https://github.com/Runkang10/website/",
   },
 ];
@@ -44,7 +49,9 @@ const SocialLinks = ({ reverse }: ReverseProps) => {
   );
 };
 
-const Footer = () => {
+const Footer = async () => {
+  let getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
+
   return (
     // Footer
     <footer className="z-30 w-full p-4 border-t bg-background flex flex-col space-y-8">
@@ -55,6 +62,36 @@ const Footer = () => {
             Runkang10
           </div>
           <SocialLinks reverse={true} />
+        </section>
+        <section className="flex flex-col min-h-[64px] mb-8 md:mb-0 space-y-4 text-sm">
+          <span
+            className="text-primary font-semibold"
+            id="projects"
+            key="projects"
+          >
+            Projects
+          </span>
+          <div className="flex-1 flex flex-col space-y-2">
+            {getProjects.map((project, idx) => (
+              <Link
+                href={project.href.href}
+                isExternal={project.href.external}
+                className="w-max text-muted-foreground transition-colors hover:text-primary"
+                key={idx}
+              >
+                {project.name}
+              </Link>
+            ))}
+          </div>
+          <div className="md:max-w-32 space-y-3">
+            <Separator />
+            <Link
+              href="/projects"
+              className="w-max text-muted-foreground transition-colors hover:hover:text-color-primary"
+            >
+              More projects
+            </Link>
+          </div>
         </section>
         {FooterData.classes.map((section) => (
           <section

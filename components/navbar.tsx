@@ -11,7 +11,7 @@ import { ReadAndGetAsList } from "@/lib/data";
 import { Separator } from "./ui/separator";
 import { HTMLAttributes } from "react";
 
-type projectProps = {
+export type projectProps = {
     name: string,
     href: {
         href: string,
@@ -80,7 +80,7 @@ const NavBar = async () => {
                                     </li>
                                     <li className="text-sm p-1">
                                         <Link href="/projects" className="transition-all w-full hover:text-color-primary justify-between">
-                                            All projects
+                                            More projects
                                         </Link>
                                     </li>
                                 </ul>
