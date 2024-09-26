@@ -6,8 +6,9 @@ import GithubLogo from "@/public/github/github-mark-white.svg";
 import { getDateYear } from "@/lib/utils";
 import { FooterData } from "@/lib/footer";
 import { projectProps } from "./navbar";
-import { ReadAndGetAsList } from "@/lib/data";
+import { getCommitId, ReadAndGetAsList } from "@/lib/data";
 import { Separator } from "./ui/separator";
+import ProjectPackage from "@/package.json";
 // import { FooterConfig, FooterConfigItems } from "@/config/footer";
 // import { CLink } from "@/components/ui/CLink";
 // import { LogoWithText } from "@/components/logo/default";
@@ -50,19 +51,51 @@ const SocialLinks = ({ reverse }: ReverseProps) => {
 };
 
 const Footer = async () => {
+  // Get current commit id
+  const CommitId = await getCommitId();
+
+  // Get projects then only shows 8 
   let getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
   getProjects = getProjects.slice(0, 8);
 
   return (
     // Footer
     <footer className="z-30 w-full p-4 border-t bg-background flex flex-col space-y-8">
-      <div className="w-full block md:grid grid-cols-4 p-4 gap-8 justify-start items-start">
-        <section className="flex justify-between items-center md:justify-start md:items-start md:flex-col min-h-[64px]">
-          <div className="m-0 p-0 flex justify-start items-center gap-2 font-bold select-none">
-            <Image src={Logo} alt="Runkang10" width={40} height={40} priority />
-            Runkang10
+      <div className="w-full block md:grid grid-cols-4 p-4 gap-8 md:space-y-0 space-y-8 justify-start items-start">
+        <section className="flex flex-col md:mr-8">
+          <div className="flex justify-between items-center md:justify-start md:items-start md:flex-col min-h-[64px]">
+            <div className="m-0 p-0 flex justify-start items-center gap-2 font-bold select-none">
+              <Image
+                src={Logo}
+                alt="Runkang10"
+                width={40}
+                height={40}
+                priority
+              />
+              Runkang10
+            </div>
+            <SocialLinks reverse={true} />
           </div>
-          <SocialLinks reverse={true} />
+          {/* Shows website version and commit */}
+          <div className="flex flex-col flex-wrap gap-1">
+            <span className="text-sm text-primary whitespace-nowrap gap-2 flex flex-row items-center">
+              Version:
+              <span className="w-max py-[2px] text-muted-foreground px-1 bg-primary-foreground rounded-lg">v{ProjectPackage.version}</span>
+            </span>
+            <span className="text-sm text-primary whitespace-nowrap gap-2 flex flex-row items-center">
+              Commit:
+              <Link
+                href={`https://github.com/Runkang10/website/commit/${CommitId.id}`}
+                className="w-max py-[2px] text-muted-foreground px-1 bg-primary-foreground rounded-lg transition-colors hover:text-color-primary"
+                isExternal
+                hideIcon
+                key={CommitId.ok && CommitId.id}
+                title={CommitId.ok && CommitId.id}
+              >
+                {CommitId.id.slice(0, 6)}
+              </Link>
+            </span>
+          </div>
         </section>
         <section className="flex flex-col min-h-[64px] mb-8 md:mb-0 space-y-4 text-sm">
           <span
@@ -88,7 +121,7 @@ const Footer = async () => {
             <Separator />
             <Link
               href="/projects"
-              className="w-max text-muted-foreground transition-colors hover:hover:text-color-primary"
+              className="w-max text-muted-foreground transition-colors hover:text-color-primary"
             >
               More projects
             </Link>
