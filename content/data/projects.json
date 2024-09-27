@@ -1,0 +1,23 @@
+[
+    {
+        "name": "SyS App",
+        "href": {
+            "href": "https://sysapp.org",
+            "external": true
+        }
+    },
+    {
+        "name": "SyS App Webkit",
+        "href": {
+            "href": "/project/sys-app-webkit",
+            "external": false
+        }
+    },
+    {
+        "name": "SimplePlugin",
+        "href": {
+            "href": "/project/simpleplugin",
+            "external": false
+        }
+    }
+]

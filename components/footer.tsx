@@ -9,6 +9,7 @@ import { projectProps } from "./navbar";
 import { getCommitId, ReadAndGetAsList } from "@/lib/data";
 import { Separator } from "./ui/separator";
 import ProjectPackage from "@/package.json";
+import { Badge } from "./ui/badge";
 // import { FooterConfig, FooterConfigItems } from "@/config/footer";
 // import { CLink } from "@/components/ui/CLink";
 // import { LogoWithText } from "@/components/logo/default";
@@ -52,9 +53,9 @@ const SocialLinks = ({ reverse }: ReverseProps) => {
 
 const Footer = async () => {
   // Get current commit id
-  const CommitId = await getCommitId();
+  const CommitId = getCommitId();
 
-  // Get projects then only shows 8 
+  // Get projects then only shows 8
   let getProjects: projectProps[] = await ReadAndGetAsList("projects.json");
   getProjects = getProjects.slice(0, 8);
 
@@ -80,20 +81,21 @@ const Footer = async () => {
           <div className="flex flex-col flex-wrap gap-1">
             <span className="text-sm text-primary whitespace-nowrap gap-2 flex flex-row items-center">
               Version:
-              <span className="w-max py-[2px] text-muted-foreground px-1 bg-primary-foreground rounded-lg">v{ProjectPackage.version}</span>
+              <Badge>v{ProjectPackage.version}</Badge>
             </span>
             <span className="text-sm text-primary whitespace-nowrap gap-2 flex flex-row items-center">
               Commit:
-              <Link
-                href={`https://github.com/Runkang10/website/commit/${CommitId.id}`}
-                className="w-max py-[2px] text-muted-foreground px-1 bg-primary-foreground rounded-lg transition-colors hover:text-color-primary"
-                isExternal
-                hideIcon
-                key={CommitId.ok && CommitId.id}
-                title={CommitId.ok && CommitId.id}
-              >
-                {CommitId.id.slice(0, 6)}
-              </Link>
+              <Badge>
+                <Link
+                  href={`https://github.com/Runkang10/website/commit/${CommitId.id}`}
+                  isExternal
+                  hideIcon
+                  key={CommitId.ok && CommitId.id}
+                  title={CommitId.ok && CommitId.id}
+                >
+                  {CommitId.id.slice(0, 7)}
+                </Link>
+              </Badge>
             </span>
           </div>
         </section>
@@ -117,7 +119,7 @@ const Footer = async () => {
               </Link>
             ))}
           </div>
-          <div className="md:max-w-32 space-y-3">
+          <div className="md:max-w-40 space-y-3">
             <Separator />
             <Link
               href="/projects"
