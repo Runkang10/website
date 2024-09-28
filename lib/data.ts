@@ -4,7 +4,7 @@ import fs from "fs";
 
 const ReadAndGetAsList = async (fileName: string): Promise<any[]> => {
   try {
-    const filePath = path.join(process.cwd(), "data", fileName);
+    const filePath = path.join(process.cwd(), "content", "data", fileName);
     const jsonData = fs.readFileSync(filePath, "utf-8");
     const data = JSON.parse(jsonData);
     return Array.isArray(data) ? data : [data];
@@ -14,10 +14,10 @@ const ReadAndGetAsList = async (fileName: string): Promise<any[]> => {
   }
 };
 
-const getCommitId = async (): Promise<{
+const getCommitId = (): {
   ok: Boolean,
   id: string
-}> => {
+} => {
   try {
     const head = fs.readFileSync(path.join(process.cwd(), '.git/HEAD'), 'utf8').trim();
     const refPath = head.split(' ')[1];
