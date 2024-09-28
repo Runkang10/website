@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({
           >
             <Image
               src={HeroBanner}
-              alt="Hero"
+              alt=""
               style={{ objectFit: "cover" }}
               fill
               className={cn(
