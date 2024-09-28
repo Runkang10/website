@@ -5,9 +5,9 @@ const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs))
 }
 
-const getDateYear = () => {
+const getCurrentYear = () => {
   const date = new Date();
   return date.getFullYear()
 }
 
-export { cn, getDateYear };
+export { cn, getCurrentYear };
