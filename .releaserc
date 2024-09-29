@@ -18,7 +18,10 @@
         "assets": [
           "CHANGELOG.md"
         ],
-        "message": "chore(release): ${nextRelease.version}"
+        "message": "chore(release): ${nextRelease.version}",
+        "branches": [
+          "main"
+        ]
       }
     ],
     "@semantic-release/github"
