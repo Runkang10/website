@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Docs",
+    "href": {
+      "href": "https://docs.runkang10.sysapp.org/",
+      "external": true,
+      "showIcon": true
+    }
+  },
+  {
+    "name": "About",
+    "href": {
+      "href": "/about",
+      "external": false,
+      "showIcon": false
+    }
+  },
+  {
+    "name": "Contact",
+    "href": {
+      "href": "/contact",
+      "external": false,
+      "showIcon": false
+    }
+  }
+]
