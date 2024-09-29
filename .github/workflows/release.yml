@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_run:
     workflows:
-      - Test
+      - test
     types:
       - completed
       - requested
