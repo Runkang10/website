@@ -7,16 +7,21 @@ on:
     types:
       - completed
       - requested
+    branches:
+      - main
+      - dev
 
 jobs:
-  release:
+  on-success:
+    name: Release
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     permissions:
       contents: write
       issues: write
       pull-requests: write
-
-    name: Release
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -38,3 +43,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
