@@ -1,6 +1,6 @@
 import Link from "@/sys-app-webkit/next/components/link";
 import { buttonVariants } from "@/components/ui/button";
-import { cn, getDateYear } from "@/lib/utils";
+import { cn, getCurrentYear } from "@/lib/utils";
 import HeroBanner from "@/public/herobanner.svg";
 import Image from "next/image";
 
@@ -26,7 +26,7 @@ export default function Home() {
                 Hi, I&apos;m Runkang10.
               </h1>
               <p className="font-medium leading-normal text-color-primary lg:text-4xl lg:leading-normal text-3xl">
-                A {getDateYear() - 2010} years old developer.
+                A {getCurrentYear() - 2010} years old developer.
               </p>
               <br />
               <div className="flex flex-row gap-4 mt-8 justify-center lg:justify-start">

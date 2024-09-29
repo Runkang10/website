@@ -1,21 +1,9 @@
-// Data lib (Read data from @/data/)
+// Data lib
 import path from "path";
 import fs from "fs";
 
-const ReadAndGetAsList = async (fileName: string): Promise<any[]> => {
-  try {
-    const filePath = path.join(process.cwd(), "content", "data", fileName);
-    const jsonData = fs.readFileSync(filePath, "utf-8");
-    const data = JSON.parse(jsonData);
-    return Array.isArray(data) ? data : [data];
-  } catch (error) {
-    console.error(`Error reading file: ${error}`);
-    return [];
-  }
-};
-
-const getCommitId = (): {
-  ok: Boolean,
+const getCommitID = (): {
+  ok: boolean,
   id: string
 } => {
   try {
@@ -34,4 +22,4 @@ const getCommitId = (): {
   }
 };
 
-export { ReadAndGetAsList, getCommitId };
+export { getCommitID };

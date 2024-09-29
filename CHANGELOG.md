@@ -1,6 +1,16 @@
-## [1.0.1](https://github.com/Runkang10/website/compare/v1.0.0...v1.0.1) (2024-09-29)
+# [1.1.0-dev.1](https://github.com/Runkang10/website/compare/v1.0.1...v1.1.0-dev.1) (2024-09-29)
 
 
 ### Bug Fixes
 
-* **CHANGELOG:** Delete `CHANGELOG.md` ([25995a4](https://github.com/Runkang10/website/commit/25995a4d1911326d26bbb63a9706d7b3c349d80c))
+* Changelog conflict with main branch ([5b6b564](https://github.com/Runkang10/website/commit/5b6b564f68ca886398661e72b012afdceae36829))
+* Fix conflict during merge from dev to main ([a53c02c](https://github.com/Runkang10/website/commit/a53c02caacf6646ab56466ddc5f6eae4b3c159c3))
+* Fix conflict during merge from dev to main ([f9017ec](https://github.com/Runkang10/website/commit/f9017ec34396f670065bca0deef28fb096a35f06))
+* **release:** Fix `release.yml` workflow ([5869791](https://github.com/Runkang10/website/commit/586979149c5f4eb43f400c854e23c773d93c2cc1))
+* **release:** Fix `release.yml` workflow ([24b7c03](https://github.com/Runkang10/website/commit/24b7c03c1052cf01fa9c89476fed88147ecba113))
+* **services:** Temporary removed `services/` ([bf13ef3](https://github.com/Runkang10/website/commit/bf13ef3e06225e8a715a8c282d4ea6601150153f))
+
+
+### Features
+
+* **workflow:** Add test workflow ([7af7751](https://github.com/Runkang10/website/commit/7af7751f3b840bf4d7257c43d603932569f8e020))
