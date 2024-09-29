@@ -1,3 +1,17 @@
+# [1.0.0-dev.2](https://github.com/Runkang10/website/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2024-09-29)
+
+
+### Bug Fixes
+
+* **release:** Fix `release.yml` workflow ([5869791](https://github.com/Runkang10/website/commit/586979149c5f4eb43f400c854e23c773d93c2cc1))
+* **release:** Fix `release.yml` workflow ([24b7c03](https://github.com/Runkang10/website/commit/24b7c03c1052cf01fa9c89476fed88147ecba113))
+* **services:** Temporary removed `services/` ([bf13ef3](https://github.com/Runkang10/website/commit/bf13ef3e06225e8a715a8c282d4ea6601150153f))
+
+
+### Features
+
+* **workflow:** Add test workflow ([7af7751](https://github.com/Runkang10/website/commit/7af7751f3b840bf4d7257c43d603932569f8e020))
+
 # 1.0.0-dev.1 (2024-09-28)
 
 
