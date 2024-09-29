@@ -4,11 +4,11 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { cn, getCurrentYear } from "@/lib/utils";
+import { Description, Title, TitleTemplate } from "@/lib/seo";
 
 // CSS
 import "@/css/loading.css";
 import "@/css/globals.css";
-import { Description, Title, TitleTemplate } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: TitleTemplate,
   },
   description: Description,
-  icons: ["favicon.ico", "logo.png"],
+  icons: ["favicon.ico", "logo.png", "logo.svg"],
   category: "portfolio",
   openGraph: {
     title: "Runkang10",
