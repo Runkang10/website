@@ -1,12 +1,10 @@
-import ProjectsData from "@/content/data/projects.json";
-import { projectProps } from "../navbar/navbar";
+import { GetProjects } from "@/lib/project";
 import Link from "@/sys-app-webkit/next/components/link";
 import { Separator } from "../ui/separator";
 
 const ProjectsSection = () => {
   // Get projects then shows only 8
-  let getProjects: projectProps[] = ProjectsData;
-  getProjects = getProjects.slice(0, 8);
+  let getProjects = GetProjects(8);
 
   return (
     <section className="flex flex-col min-h-[64px] mb-8 md:mb-0 space-y-4 text-sm">
