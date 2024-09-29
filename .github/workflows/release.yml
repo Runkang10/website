@@ -6,6 +6,7 @@ on:
       - Test
     types:
       - completed
+      - requested
 
 jobs:
   release:
