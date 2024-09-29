@@ -1,3 +1,10 @@
+## [1.2.1-dev.1](https://github.com/Runkang10/website/compare/v1.2.0...v1.2.1-dev.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* Fix changelogs to generate only in main branch ([1549ec5](https://github.com/Runkang10/website/commit/1549ec5e9fccafc7adf9d2068907699247dbc5b1))
+
 # [1.2.0](https://github.com/Runkang10/website/compare/v1.1.0...v1.2.0) (2024-09-29)
 
 
