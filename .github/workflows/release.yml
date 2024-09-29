@@ -1,16 +1,40 @@
 name: Release
 
 on:
-  workflow_run:
-    workflows: [test]
-    types:
-      - completed
-      - requested
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
     branches:
       - main
       - dev
 
 jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Building
+        run: pnpm build
+
   release:
     name: Release
     runs-on: ubuntu-latest
