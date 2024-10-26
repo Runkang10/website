@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
-import { cn, getCurrentYear } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { Description, Title, TitleTemplate } from "@/lib/seo";
 
 // CSS
@@ -18,22 +18,30 @@ export const metadata: Metadata = {
     template: TitleTemplate,
   },
   description: Description,
-  icons: ["favicon.ico", "logo.png", "logo.svg"],
+  icons: [
+    "favicon.ico",
+    "logo.png",
+    "logo.svg",
+    "logo-x0.5.png",
+    "logo-x0.75.png",
+    "logo-x1.5.png",
+    "logo-x2.png",
+    "logo-x3.png",
+    "logo-x4.png",
+  ],
   category: "portfolio",
   openGraph: {
     title: "Runkang10",
-    description: `Hi, I'm Runkang10, a ${
-      getCurrentYear() - 2010
-    } years old developer and founder of SyS App.`,
+    description: Description,
     images: [
       {
-        url: "https://runkang10.sysapp.org/og.png",
+        url: "/og.png",
         alt: "Runkang10",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://runkang10.sysapp.org/og.svg",
+        url: "/og.svg",
         alt: "Runkang10",
         width: 1200,
         height: 630,
@@ -42,18 +50,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Runkang10",
-    description: `Hi, I'm Runkang10, a ${
-      getCurrentYear() - 2010
-    } years old developer and founder of SyS App.`,
+    description: Description,
     images: [
       {
-        url: "https://runkang10.sysapp.org/og.png",
+        url: "/og.png",
         alt: "Runkng10",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://runkang10.sysapp.org/og.svg",
+        url: "/og.svg",
         alt: "Runkang10",
         width: 1200,
         height: 630,
