@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         {getProjects.map((project, idx) => (
           <Link
             href={project.href.href}
-            isExternal={project.href.external}
+            isExternal
             className="w-max text-muted-foreground transition-colors hover:text-primary"
             key={idx}
           >
