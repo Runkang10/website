@@ -3,18 +3,27 @@
 import Link from "@/sys-app-webkit/next/components/link";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
+import clsx from "clsx";
 
-const PageBrandTemplate = () => {
-  const LinkClass: string =
-    "m-0 p-0 cursor-pointer flex justify-start items-center gap-2 font-bold select-none";
-  const Text: string = "Runkang10";
+const BaseClass = "m-0 p-0 flex justify-start items-center gap-2 font-bold";
+const LinkClass = "cursor-pointer select-none";
+const Text = "Runkang10";
+const Suffix = ".dev";
 
-  return (
-    <Link href="/" className={LinkClass}>
-      <Image src={Logo} alt={Text} width={40} height={40} priority />
+const PageBrandTemplate = () => (
+  <div className={BaseClass}>
+    <Image src={Logo} alt={Text} width={40} height={40} priority />
+    <span className="text-lg">
       {Text}
-    </Link>
-  );
-};
+      <span className="text-xs">{Suffix}</span>
+    </span>
+  </div>
+);
 
-export { PageBrandTemplate };
+const PageBrandTemplateLink = () => (
+  <Link href="/" className={clsx(BaseClass, LinkClass)}>
+    <PageBrandTemplate />
+  </Link>
+);
+
+export { PageBrandTemplate, PageBrandTemplateLink };
