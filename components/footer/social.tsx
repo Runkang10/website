@@ -1,5 +1,6 @@
 // Social links
 import GithubLogo from "@/public/github/github-mark-white.svg";
+import DiscordLogo from "@/public/discord/discord-mark-white.svg";
 import Image from "next/image";
 import Link from "@/sys-app-webkit/next/components/link";
 
@@ -13,6 +14,10 @@ const SocialList: SocialProps[] = [
   {
     image: <Image src={GithubLogo} alt="" width={17.5} height={17.5} />,
     url: "https://github.com/Runkang10/website/",
+  },
+  {
+    image: <Image src={DiscordLogo} alt="" width={17.5} height={17.5} />,
+    url: "https://discord.com/invite/p8EnCgwWMd",
   },
 ];
 

@@ -3,8 +3,7 @@ import Link from "@/sys-app-webkit/next/components/link";
 import { Separator } from "../ui/separator";
 
 const ProjectsSection = () => {
-  // Get projects then shows only 8
-  let getProjects = GetProjects(8);
+  let getProjects = GetProjects(5);
 
   return (
     <section className="flex flex-col min-h-[64px] mb-8 md:mb-0 space-y-4 text-sm">
@@ -26,10 +25,11 @@ const ProjectsSection = () => {
       <div className="md:max-w-40 space-y-3">
         <Separator />
         <Link
-          href="/projects"
+          href="https://github.com/Runkang10/"
+          isExternal
           className="w-max text-muted-foreground transition-colors hover:text-color-primary"
         >
-          More projects
+          More on Github
         </Link>
       </div>
     </section>

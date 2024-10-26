@@ -2,8 +2,8 @@
 
 import Link from "@/sys-app-webkit/next/components/link";
 import Image from "next/image";
-import Logo from "@/public/logo.png";
-import clsx from "clsx";
+import Logo from "@/public/logo-x0.5.png";
+import { cn } from "@/lib/utils";
 
 const BaseClass = "m-0 p-0 flex justify-start items-center gap-2 font-bold";
 const LinkClass = "cursor-pointer select-none";
@@ -21,7 +21,7 @@ const PageBrandTemplate = () => (
 );
 
 const PageBrandTemplateLink = () => (
-  <Link href="/" className={clsx(BaseClass, LinkClass)}>
+  <Link href="/" className={cn(BaseClass, LinkClass)}>
     <PageBrandTemplate />
   </Link>
 );

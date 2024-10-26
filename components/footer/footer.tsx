@@ -4,14 +4,12 @@ import { BrandSection } from "./brand";
 import { ProjectsSection } from "./projects";
 import { DynamicSection } from "./dynamic";
 import { SocialLinks } from "./social";
-import { ResourcesSection } from "./resources";
 
 const Footer = () => (
   <footer className="z-30 w-full p-4 border-t bg-background flex flex-col space-y-8">
     <div className="w-full block md:grid grid-cols-4 p-4 gap-8 md:space-y-0 space-y-8 justify-start items-start">
       <BrandSection />
       <ProjectsSection />
-      <ResourcesSection />
       <DynamicSection />
       {/* <ContactSection /> */}
     </div>

@@ -1,11 +1,10 @@
 import Link from "@/sys-app-webkit/next/components/link";
-import { getCommitID } from "@/lib/data";
+import { getFormatedCommitBasedVersion } from "@/lib/data";
 import { SocialLinks } from "./social";
 import { PageBrandTemplate } from "../pagebrandtemplate";
 
 const BrandSection = () => {
-  // Get current commit id
-  const CommitID = getCommitID();
+  const version = getFormatedCommitBasedVersion();
 
   return (
     <section className="flex flex-col gap-4 md:mr-8">
@@ -19,22 +18,26 @@ const BrandSection = () => {
           My portfolio is open-source.
         </span>
         <span className="text-sm text-muted-foreground gap-1 whitespace-nowrap flex flex-row items-center">
-          Inspired by
-          <Link href="https://modrinth.com" isExternal>
+          Inspired from
+          <Link
+            href="https://modrinth.com"
+            isExternal
+            className="transition-all hover:underline hover:text-color-primary"
+          >
             Modrinth
           </Link>
         </span>
         <span className="text-sm text-muted-foreground whitespace-nowrap flex flex-row items-center">
-          prod@
+          {version.branch}
           <Link
-            href={`https://github.com/Runkang10/website/commit/${CommitID.id}`}
+            href={`https://github.com/Runkang10/website/commit/${version.commit.id}`}
             className="text-color-primary transition-all hover:underline"
             isExternal
             hideIcon
-            key={CommitID.id}
-            title={CommitID.id}
+            key={version.commit.id}
+            title={version.commit.id}
           >
-            {CommitID.id.slice(0, 7)}
+            {version.commit.id.slice(0, 7)}
           </Link>
         </span>
       </div>
