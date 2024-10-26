@@ -2,22 +2,19 @@
   {
     "name": "SyS App",
     "href": {
-      "href": "https://sysapp.org",
-      "external": true
+      "href": "https://sysapp.org"
     }
   },
   {
     "name": "UniversalMCAPI",
     "href": {
-      "href": "https://github.com/Runkang10/UniversalMCAPI",
-      "external": true
+      "href": "https://github.com/Runkang10/UniversalMCAPI"
     }
   },
   {
     "name": "ClientCrasher",
     "href": {
-      "href": "https://github.com/Runkang10/ClientCrasher",
-      "external": true
+      "href": "https://github.com/Runkang10/ClientCrasher"
     }
   }
 ]
