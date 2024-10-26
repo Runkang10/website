@@ -1,6 +1,6 @@
 type HREF = {
   href: string;
-  external: boolean;
+  external?: boolean;
   showIcon?: boolean;
 };
 
