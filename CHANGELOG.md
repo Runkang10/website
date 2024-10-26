@@ -1,3 +1,15 @@
+# [1.3.0-dev.1](https://github.com/Runkang10/website/compare/v1.2.1-dev.1...v1.3.0-dev.1) (2024-10-26)
+
+
+### Bug Fixes
+
+* Remove outdated content. ([a1ccee4](https://github.com/Runkang10/website/commit/a1ccee43ff42788e37d7977bf527d3f02fb688ee))
+
+
+### Features
+
+* Update from PageBrandTemplate to PageBrandTemplateLink. ([ad3fb0c](https://github.com/Runkang10/website/commit/ad3fb0c809de81f780c60ef4b5869701cba191df))
+
 ## [1.2.1-dev.1](https://github.com/Runkang10/website/compare/v1.2.0...v1.2.1-dev.1) (2024-09-29)
 
 
