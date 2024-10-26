@@ -6,6 +6,9 @@ const nextConfig = {
       dynamic: 180,
     },
   },
+  images: {
+    unoptimized: false
+  },
   reactStrictMode: true,
 };
 
