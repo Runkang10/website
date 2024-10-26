@@ -34,7 +34,25 @@ const getCommitID = (): {
 };
 
 const getFormatedCommitBasedVersion = () => {
+  const Branch = getCurrentBranch();
   const CommitId = getCommitID();
+  let versionBranch: string = "";
+
+  switch (Branch) {
+    case "main":
+      versionBranch = "prod";
+      break;
+    case "dev":
+      versionBranch = "dev";
+      break;
+    default:
+      versionBranch = Branch;
+  }
+
+  return {
+    branch: `${versionBranch}@`,
+    commit: CommitId
+  };
 };
 
 export { getCurrentBranch, getCommitID, getFormatedCommitBasedVersion };
