@@ -34,6 +34,20 @@
   }
 }
 
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 10s linear infinite;
+}
+
 @layer base {
   * {
     @apply border-border;
