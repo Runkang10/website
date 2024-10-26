@@ -7,17 +7,17 @@
     }
   },
   {
-    "name": "SyS App Webkit",
+    "name": "UniversalMCAPI",
     "href": {
-      "href": "/project/sys-app-webkit",
-      "external": false
+      "href": "https://github.com/Runkang10/UniversalMCAPI",
+      "external": true
     }
   },
   {
-    "name": "SimplePlugin",
+    "name": "ClientCrasher",
     "href": {
-      "href": "/project/simpleplugin",
-      "external": false
+      "href": "https://github.com/Runkang10/ClientCrasher",
+      "external": true
     }
   }
 ]
