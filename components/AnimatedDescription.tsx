@@ -68,10 +68,14 @@ const AnimatedDescription = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="absolute text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#a7d0ff] to-[hsl(var(--primary))]"
-              style={{ backgroundClip: "text", WebkitBackgroundClip: "text" }}
+              className="absolute leading-[120%] justify-center overflow-visible"
             >
-              {languages[index]}
+              <motion.span
+                className="text-4xl md:text-5xl lg:text-6xl leading-[1.2] font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#a7d0ff] to-[hsl(var(--primary))]"
+                style={{ backgroundClip: "text", WebkitBackgroundClip: "text" }}
+              >
+                {languages[index]}
+              </motion.span>
             </motion.div>
           </AnimatePresence>
         </div>
