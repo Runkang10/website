@@ -1,4 +1,4 @@
-import Link from "@/sys-app-webkit/next/components/link";
+import Link from "@/components/link";
 import FooterData from "@/content/data/footer.json";
 
 const DynamicSection = () => {

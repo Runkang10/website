@@ -1,4 +1,4 @@
-import Link from "@/sys-app-webkit/next/components/link";
+import Link from "@/components/link";
 import { getFormatedCommitBasedVersion } from "@/lib/data";
 import { SocialLinks } from "./social";
 import { PageBrandTemplate } from "../pagebrandtemplate";
@@ -26,6 +26,17 @@ const BrandSection = () => {
           >
             Modrinth
           </Link>
+        </span>
+        <span className="text-sm text-muted-foreground gap-1 whitespace-nowrap flex flex-row items-center">
+          and
+          <Link
+            href="https://www.youtube.com/@KasaiSora"
+            isExternal
+            className="transition-all hover:underline hover:text-color-primary"
+          >
+            Kasaisora
+          </Link>
+          for the theme.
         </span>
         <span className="text-sm text-muted-foreground whitespace-nowrap flex flex-row items-center">
           {version.branch}

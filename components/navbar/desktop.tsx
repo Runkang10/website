@@ -6,7 +6,7 @@ import {
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { ExternalLink } from "lucide-react";
-import Link from "@/sys-app-webkit/next/components/link";
+import Link from "@/components/link";
 import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
 import { GetProjects } from "@/lib/project";
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
               >
                 <Link
                   href={project.href.href}
-                  className="transition-all w-full hover:text-color-primary justify-between"
+                  className="transition-all w-full hover:text-color-primary justify-between gap-2"
                   isExternal
                   hideIcon
                 >
@@ -45,8 +45,9 @@ const ProjectsSection = () => {
           </li>
           <li className="text-sm p-1">
             <Link
-              href="/projects"
+              href="https://github.com/Runkang10/"
               className="transition-all w-full hover:text-color-primary justify-between"
+              isExternal
             >
               More projects
             </Link>

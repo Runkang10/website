@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
 import { ExternalLink } from "lucide-react";
@@ -11,7 +12,7 @@ import {
   SheetTitle,
 } from "../ui/sheet";
 import { SocialLinks } from "./social";
-import Link from "@/sys-app-webkit/next/components/link";
+import Link from "@/components/link";
 import { Menu } from "lucide-react";
 import { GetProjects } from "@/lib/project";
 import { GetNavbarLinks } from "@/lib/navbar";

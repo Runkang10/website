@@ -1,5 +1,5 @@
 import { GetProjects } from "@/lib/project";
-import Link from "@/sys-app-webkit/next/components/link";
+import Link from "@/components/link";
 import { Separator } from "../ui/separator";
 
 const ProjectsSection = () => {
