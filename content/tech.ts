@@ -3,25 +3,26 @@ import { ProgrammingLanguagesType } from "@/types/tech";
 const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     name: "Python",
-    url: "",
+    url: "https://www.python.org/",
   },
   {
     name: "JavaScript",
-    url: "",
   },
   {
     name: "TypeScript",
-    url: ""
+    url: "https://www.typescriptlang.org/",
   },
   {
-    name: "Rust"
+    name: "Rust",
+    url: "https://www.rust-lang.org/",
   },
   {
-    name: "Java"
+    name: "Java",
   },
   {
-    name: "Kotlin"
-  }
+    name: "Kotlin",
+    url: "https://kotlinlang.org/",
+  },
 ];
 
 export { ProgrammingLanguages };
