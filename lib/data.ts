@@ -42,16 +42,18 @@ const getFormatedCommitBasedVersion = () => {
     case "main":
       versionBranch = "prod";
       break;
+    case "master":
+      versionBranch = "prod";
+      break;
     case "dev":
       versionBranch = "dev";
-      break;
     default:
       versionBranch = Branch;
   }
 
   return {
     branch: `${versionBranch}@`,
-    commit: CommitId
+    commit: CommitId,
   };
 };
 
