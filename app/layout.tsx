@@ -1,7 +1,6 @@
 // Global layout for every page.
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { cn } from "@/lib/utils";
 import { Description, Title, TitleTemplate } from "@/lib/seo";
@@ -82,10 +81,7 @@ export default function RootLayout({
         )}
         suppressHydrationWarning
       >
-        <Navbar />
-        <main className="min-w-full min-h-[550px] mx-auto flex-1 flex flex-col">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>
