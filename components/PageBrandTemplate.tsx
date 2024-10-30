@@ -1,7 +1,7 @@
 // Page brand template
 import Link from "@/components/link";
 import Image from "next/image";
-import Logo from "@/public/logo-x0.5.png";
+import { LogoPNG } from "@/content/ImageProvider";
 import { cn } from "@/lib/utils";
 
 const BaseClass = "m-0 p-0 flex justify-start items-center gap-2 font-bold";
@@ -11,7 +11,7 @@ const Suffix = ".dev";
 
 const PageBrandTemplate = () => (
   <div className={BaseClass}>
-    <Image src={Logo} alt={Text} width={40} height={40} priority />
+    <Image src={LogoPNG} alt={Text} width={40} height={40} priority />
     <span className="text-lg">
       {Text}
       <span className="text-xs">{Suffix}</span>
