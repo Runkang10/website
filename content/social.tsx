@@ -1,6 +1,6 @@
 import Image from "next/image";
-import GithubLogo from "@/public/github/github-mark-white.svg";
-import DiscordLogo from "@/public/discord/discord-mark-white.svg";
+import { Github } from "@/content/ImageProvider";
+import { Discord } from "@/content/ImageProvider";
 
 interface SocialProps {
   image: React.ReactNode;
@@ -9,11 +9,11 @@ interface SocialProps {
 
 const SocialLinksList: SocialProps[] = [
   {
-    image: <Image src={GithubLogo} alt="" width={17.5} height={17.5} />,
+    image: <Image src={Github} alt="" width={17.5} height={17.5} />,
     url: "https://github.com/Runkang10/website/",
   },
   {
-    image: <Image src={DiscordLogo} alt="" width={17.5} height={17.5} />,
+    image: <Image src={Discord} alt="" width={17.5} height={17.5} />,
     url: "https://discord.com/invite/p8EnCgwWMd",
   },
 ];

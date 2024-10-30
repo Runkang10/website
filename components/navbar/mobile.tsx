@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
 import { ExternalLink } from "lucide-react";
-import { PageBrandTemplate } from "../pagebrandtemplate";
+import { PageBrandTemplate } from "../PageBrandTemplate";
 import { Button } from "../ui/button";
 import {
   Sheet,

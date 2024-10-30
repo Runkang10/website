@@ -1,5 +1,5 @@
 // Navbar
-import { PageBrandTemplateLink } from "../pagebrandtemplate";
+import { PageBrandTemplateLink } from "../PageBrandTemplate";
 import { SocialLinks } from "./social";
 import { DesktopNavbar } from "./desktop";
 import { MobileNavbar } from "./mobile";

@@ -1,7 +1,7 @@
 import Link from "@/components/link";
 import { getFormatedCommitBasedVersion } from "@/lib/data";
 import { SocialLinks } from "./social";
-import { PageBrandTemplate } from "../pagebrandtemplate";
+import { PageBrandTemplate } from "../PageBrandTemplate";
 
 const BrandSection = () => {
   const version = getFormatedCommitBasedVersion();

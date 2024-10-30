@@ -1,5 +1,5 @@
 "use client";
-import Logo from "@/public/logo.svg";
+import { LogoPNG } from "@/content/ImageProvider";
 import { ProgrammingLanguages } from "@/content/tech";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -25,7 +25,7 @@ const AnimatedDescription = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % languages.length);
-    }, 2000);
+    }, 1250);
 
     return () => clearInterval(interval);
   });
@@ -33,7 +33,7 @@ const AnimatedDescription = () => {
   return (
     <DivBox className="relative gap-4 py-16 z-20 items-center justify-center h-full text-center px-4">
       <DivBox className="justify-center items-center mb-4">
-        <Image src={Logo} alt="" width={208} height={150} />
+        <Image src={LogoPNG} alt="" width={208} height={150} />
       </DivBox>
       <motion.div
         className="gap-3"
