@@ -81,7 +81,7 @@ export default function RootLayout({
         )}
         suppressHydrationWarning
       >
-        {children}
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>
