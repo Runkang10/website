@@ -1,6 +1,8 @@
 // Global layout for every page.
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/footer/footer";
 import { cn } from "@/lib/utils";
 import { Description, Title, TitleTemplate } from "@/lib/seo";
@@ -83,6 +85,8 @@ export default function RootLayout({
       >
         <div className="flex-1">{children}</div>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
