@@ -77,7 +77,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "antialiased w-screen min-h-screen flex flex-col"
+          "antialiased min-h-screen flex flex-col"
         )}
         suppressHydrationWarning
       >
